@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Autocomplete Search Box</title>
+
+       <!-- Bootstrap -->
+
+    <!-- CSS bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- JavaScript bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+  <!-- Front Awesm -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- Css -->
+
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body style="background-image: url('12.jpg')">
+
+  <!-- navbar -->
+
+  <nav class="navbar fixed-top" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"  href="#">AutoComplete Suggestions Serch Bar</a>
+
+      <div class="offcanvas offcanvas-end" style="background-color: #e3f2fd;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Suggestion Serch Bar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form class="d-flex mt-3" role="search">
+            <div class="wrapper">
+              <div class="search-input">
+                <a href="" id="tag" target="_blank" hidden></a>
+                <input type="text" autocomplete id="input" placeholder="Type to search..">
+          
+                <div class="autocom-box">
+                </div>
+          
+                <div class="icon"><i class="fas fa-search"></i></div>
+              </div>
+            </div>           
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-xl container-lg container-md container-sm container-xs mt-5">
+      <button class="btn-button btn btn-outline-danger text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" type="button" >
+        Please Click On Me <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up-lines" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M9 12h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v3h-6v-3z"></path>
+          <path d="M9 21h6"></path>
+          <path d="M9 18h6"></path>
+       </svg>
+      </button>
+    </p>
+    <div class="btn-button1" style="min-height: 120px;">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 300px;">
+          <div class="wrapper">
+            <div class="search-input">
+              <a href="" id="tag" target="_blank" hidden></a>
+              <input type="text" autocomplete id="input" placeholder="Type to search..">
+        
+              <div class="autocom-box">
+              </div>
+        
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- javaScript -->
+
+  <script src="suggestions.js"></script>
+  <script src="script1.js"></script>
+
+</body>
+
+</html>

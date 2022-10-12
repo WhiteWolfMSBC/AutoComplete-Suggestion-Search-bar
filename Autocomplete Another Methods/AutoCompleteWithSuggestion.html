@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto complete using Pure Javascript</title>
+</head>
+<body>
+<script type="text/javascript">
+	var tags = [
+	"Delhi",
+	"Ahmedabad",
+	"Punjab",
+	"Uttar Pradesh",
+	"Himachal Pradesh",
+	"Karnataka",
+	"Kerala",
+	"Maharashtra",
+	"Gujrat",
+	"Rajasthan",
+	"Bihar",
+	"Tamil Nadu",
+	"Haryana"
+	];
+
+
+	var n= tags.length; 
+
+	function ac(value) {
+		document.getElementById('datalist').innerHTML = '';
+
+		
+		l=value.length;
+
+	for (var i = 0; i<n; i++) {
+		if(((tags[i].toLowerCase()).indexOf(value.toLowerCase()))>-1)
+		{
+
+			var node = document.createElement("option");
+			var val = document.createTextNode(tags[i]);
+			node.appendChild(val);
+
+			document.getElementById("datalist").appendChild(node);
+
+			}
+		}
+	}
+
+</script>
+
+<input type="text" list="datalist" onkeyup="ac(this.value)">
+
+<datalist id="datalist">
+
+<option value="Delhi"></option>
+<option value="Ahemdabad"></option>
+<option value="Punjab"></option>
+<option value="Uttar Pradesh"></option>
+<option value="Himachal Pradesh"></option>
+<option value="Karnataka"></option>
+<option value="Kerala"></option>
+<option value="Maharashtra"></option>
+<option value="Gujrat"></option>
+<option value="Rajasthan"></option>
+<option value="Bihar"></option>
+<option value="Tamil Nadu"></option>
+<option value="Haryana"></option>
+
+
+</datalist>
+</body>
+</html>
